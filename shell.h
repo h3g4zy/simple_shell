@@ -131,20 +131,26 @@ int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
-/* strings */
-int custom_strlen(char *);
-int custom_strcmp(char *, char *);
-char *custom_starts_with(const char *, const char *);
-char *custom_strcat(char *, char *);
-char *custom_strcpy(char *, char *);
-char *custom_strdup(const char *);
-void custom_puts(char *);
-int custom_putchar(char);
-char *custom_strncpy(char *, char *, int);
-char *custom_strncat(char *, char *, int);
-char *custom_strchr(char *, char);
-char **custom_strtow(char *, char *);
-char **custom_strtow2(char *, char);
+/* string_functions.c */
+int _strlen(char *);
+int _strcmp(char *, char *);
+char *starts_with(const char *, const char *);
+char *_strcat(char *, char *);
+
+/* string_functions2.c */
+char *_strcpy(char *, char *);
+char *_strdup(const char *);
+void _puts(char *);
+int _putchar(char);
+
+/* string_functions3.c */
+char *_strncpy(char *, char *, int);
+char *_strncat(char *, char *, int);
+char *_strchr(char *, char);
+
+/* string_functions4.c */
+char **strtow(char *, char *);
+char **strtow2(char *, char);
 
 /* memory_functions */
 char *_memset(char *, char, unsigned int);
